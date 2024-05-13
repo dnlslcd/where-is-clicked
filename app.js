@@ -1,5 +1,22 @@
 // Recuerda todas las propiedades que tiene el objeto event !
 
+
+
+  let clickableSpace = document.querySelector(".map");
+
+  clickableSpace.addEventListener('click', (event) => {
+    console.log(event);
+    let x = event.clientX;
+    let y = event.clientY;
+// Invocamos la función drawCross, y le pasamos el valor de las variables anteriores
+    drawCross(x, y)
+
+  });
+
+
+
+
+
 function drawCross(x, y) {
   // Creamos un elemento div para la primera línea
   const line1 = document.createElement("div");
@@ -21,3 +38,6 @@ function drawCross(x, y) {
   line2.style.top = y + "px";
   document.body.appendChild(line2);
 }
+
+
+
